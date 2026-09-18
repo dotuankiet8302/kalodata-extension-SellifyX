@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Kalodata Video Downloader",
+  "version": "2.0.0",
+  "description": "Download Kalodata videos with automatic warm-up and intelligent retry system",
+  "author": "HaiMMO.me",
+  "content_scripts": [
+    {
+      "matches": ["https://www.kalodata.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://live.kalocdn.com/*", "https://www.kalodata.com/*"]
+}
